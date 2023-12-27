@@ -26,7 +26,7 @@ public class App {
         //
         driver.findElement(By.cssSelector("li.list-inline-item a.dropdown-toggle[href='']")).click();
         Thread.sleep(2000); // For Presentation
-        System.out.println("\ta.dropdown-toggle.show clicked ");
+        System.out.println("\ta.dropdown-toggle.show clicked");
         //
         driver.findElement(By.cssSelector("a[href*='account/login']")).click();
         Thread.sleep(2000); // For Presentation
@@ -40,11 +40,12 @@ public class App {
         System.out.println("\temail typed");
         //
         WebElement password = driver.findElement(By.id("input-password"));
-        email.click();
-        email.clear();
-        email.sendKeys("\tqwerty");
+        password.click();
+        password.clear();
+        password.sendKeys("qwerty");
         Thread.sleep(2000); // For Presentation
         System.out.println("\tpassword typed");
+        System.out.println("\tAccount Login, title = " + driver.getTitle());
         //
         driver.findElement(By.cssSelector("button.btn.btn-primary")).click();
         Thread.sleep(2000); // For Presentation
